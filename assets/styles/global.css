@@ -31,7 +31,7 @@ html::-webkit-scrollbar-track {
 }
 
 body{
-    background-image: url('../img/wallpaper.jpg');
+    background-image: url(../img/wallpaper.jpg);
     background-size: cover;
     font-family: var(--font-primary);
     display: flex;
@@ -61,7 +61,7 @@ body{
 
 .header__title{
     height: 2.5rem;
-    background-image: url('/assets/img/gold-grandient.jpg');
+    background-image: url(../img/gold-grandient.jpg);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -94,7 +94,7 @@ body{
 /* Button Duel */
 
 .header__button{
-    background-image: url('/assets/img/gold-grandient.jpg');
+    background-image: url(../img/gold-grandient.jpg);
     background-size: cover;
     height: 3rem;
     width: 7rem;
