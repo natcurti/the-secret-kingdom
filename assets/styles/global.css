@@ -61,7 +61,7 @@ body{
 
 .header__title{
     height: 2.5rem;
-    background-image: url('../img/gold-grandient.jpg');
+    background-image: url('/assets/img/gold-grandient.jpg');
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -94,7 +94,7 @@ body{
 /* Button Duel */
 
 .header__button{
-    background-image: url('../img/gold-grandient.jpg');
+    background-image: url('/assets/img/gold-grandient.jpg');
     background-size: cover;
     height: 3rem;
     width: 7rem;
