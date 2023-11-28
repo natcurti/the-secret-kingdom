@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/global.css">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <script type="module" src="assets/js/main.js" defer></script>
+    <title>The Secret Kingdom</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container__title">
+            <h1 class="header__title">The Secret Kingdom</h1>
+        </div>
+        <div class="header__container__subtitle-and-button">
+            <h2 class="header__subtitle">Escolha duas cartas e clique em Duelar! 
+A cada duelo, a carta do vencedor sobe de nível e todos perdem vida e mana. 
+Vence o personagem que atingir o nível 5 primeiro.</h2>
+            <button class="header__button" id="btnDuel">Duelar!</button>
+        </div>
+    </header>
+    <div class="modal__container" id="modalContainer">
+        <div class="modal__inner__container">
+            <img src="assets/img/trophy.png" alt="Troféu dourado" class="modal__img">
+            <div class="modal__container__text-and-buttons">
+                <p class="modal__text" id="modalText"></p>
+                <div class="modal__container__buttons">
+                    <button class="modal__button__continue" id="btnContinue">Continuar</button>
+                    <button class="modal__button__finish" id="btnFinish">Sair</button>
+                </div>                
+            </div>    
+        </div>
+    </div>
+    <main class="main" id="containerCards">
+        <!-- <div class="main__container__card">
+            <p class="main__card-level">1</p>
+            <p class="main__card-title">Zandak</p>
+            <div class="main__card-stats">
+                <p class="main__card-type">Mago Gnomo</p>
+                <div class="main__card__life-and-mana">
+                    <p class="main__card-life">Vida: 100</p>
+                    <p class="main__card-mana">Mana: 100</p>
+                </div>
+            </div> 
+            <img src="assets/img/card-wizard-gnome.png" class="main__card-image">
+        </div> -->
+    </main>
+</body>
+</html>

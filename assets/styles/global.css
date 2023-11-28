@@ -1,0 +1,353 @@
+@import url(reset.css);
+
+@font-face {
+    font-family: 'vinque';
+    src: url('/assets/vinque-font.otf');
+}
+
+@font-face {
+    font-family: 'magic-school';
+    src: url('/assets/magic-school-one.ttf');
+}
+
+:root{
+    --font-primary: 'vinque', sans-serif;
+    --font-secundary:  'magic-school', sans-serif;
+    --white: #FFF;
+    --dark-blue: #01013b;
+}
+
+html::-webkit-scrollbar {
+    width: 0.75rem;
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 4rem;
+    background: rgb(144, 144, 231);
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--dark-blue);
+}
+
+body{
+    background-image: url(/assets/img/wallpaper.jpg);
+    background-size: cover;
+    font-family: var(--font-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+
+.header{
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.header__container__title{
+    width: 100%;
+    height: 5rem;
+    background: radial-gradient(circle, rgba(1,1,59,1) 0%, rgba(31,9,71,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title{
+    height: 2.5rem;
+    background-image: url(/assets/img/gold-grandient.jpg);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    filter: brightness(150%);
+}
+
+.header__container__subtitle-and-button{
+    padding: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 7rem;
+    background-color: rgba(1,1,59, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__subtitle{
+    color: var(--white);
+    text-align: center;
+    width: 100%;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    white-space: pre-wrap;
+}
+
+/* Button Duel */
+
+.header__button{
+    background-image: url(/assets/img/gold-grandient.jpg);
+    background-size: cover;
+    height: 3rem;
+    width: 7rem;
+    border-radius: 1.25rem;
+    border: none;
+    font-family: var(--font-secundary);
+    font-size: 1.75rem;
+    color: var(--dark-blue);
+}
+
+.header__button:hover{
+    cursor: pointer;
+    filter: brightness(1.1);
+}
+
+/* Container Cards */
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.85rem;
+    row-gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.main__container__card{
+    position: relative;
+    width: 9rem;
+    height: 12.599rem;
+}
+
+.main__container__card:hover .main__container__flip{
+    transform: rotateY(180deg);
+}
+
+.main__container__flip{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: .6s;
+}
+
+.main__container__front, .main__container__back{
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.main__container__back{
+    transform: rotateY(180deg);
+}
+
+.main__card-title, .main__card-stats{
+    position: absolute;
+}
+
+.main__card-image, .main__card-back-img{
+    width: 9rem;
+}
+
+.main__card-level{
+    width: 1.5rem;
+    font-family: var(--font-secundary);
+    position: absolute;
+    color: var(--white);
+    font-size: 1.85rem;
+    top: 0.35rem;
+    left: 4.5%;
+    text-align: center;
+}
+
+.main__card-title{
+    width: 100%;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(-9deg);
+    text-align: center;
+    color: var(--white);
+    font-size: 0.85rem;
+    text-shadow: 4px 4px 6px rgba(0,0,0,0.85);
+}
+
+.main__card-stats{
+    bottom: 1.45rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    width: 100%;
+}
+
+.main__card__life-and-mana{
+    display: flex;
+    gap: 0.2rem;
+}
+
+.main__card-type{
+    font-family: var(--font-secundary);
+    color: var(--dark-blue);
+}
+
+.main__card-life, .main__card-mana{
+    font-size: 0.5rem;
+    color: var(--white);
+}
+
+/* Selection */
+
+.selected{
+    transform: translateY(-1.25rem);
+}
+
+/* Modal */
+
+.modal__container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal__inner__container{
+    padding: 0.5rem;
+    box-sizing: border-box;
+    background-image: url(/assets/img/gold-grandient.jpg);
+    background-size: cover;
+    border-radius: 1rem;
+    border: 4px solid #02021d;
+    z-index: 10;
+    width: 90%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.85rem;    
+}
+
+.modal__text{
+    font-family: var(--font-secundary);
+    font-size: 1.85rem;
+    color: var(--dark-blue);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.modal__img{
+    width: 5rem;
+}
+
+.modal__container__buttons{
+    display: flex;
+    justify-content: center;
+    gap: 0.85rem;
+}
+
+.modal__button__continue, .modal__button__finish{
+    padding: 0.85rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-blue);
+    border: none;
+    border-radius: 1rem;
+    height: 1.75rem;
+    color: white;
+    font-family: var(--font-primary);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.modal__button__continue:hover, .modal__button__finish:hover{
+    background-color: #1f0947;
+}   
+
+@media (min-width: 480px){
+    .header__container__subtitle-and-button{
+        flex-direction: row;
+    }
+
+    .header__subtitle{
+        width: auto;
+    }
+
+    .main__container__card{
+        width: 12rem;
+        height: 16.8rem;
+    }
+
+    .main__card-image, .main__card-back-img{
+        width: 12rem;
+    }
+
+    .main__card-level{
+        width: 2rem;
+        font-size: 2.5rem;
+    }
+
+    .main__card-title{
+        bottom: 5.35rem;
+        font-size: 1.5rem;
+    }
+
+    .main__card-stats{
+        bottom: 2rem;
+        gap: 0.1rem;
+    }
+
+    .main__card-type{
+        font-size: 1.25rem;
+    }
+    
+    .main__card-life, .main__card-mana{
+        font-size: 0.75rem;
+    }
+
+    .modal__text{
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 700px){
+    .header__subtitle{
+        font-size: 1rem;
+    }
+
+    .main{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .modal__inner__container{
+        width: 40rem;
+    }
+
+    .modal__img{
+        width: 7rem;
+    }
+}
+
+@media (min-width: 900px){
+    .main{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1024px){
+   .main{
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
