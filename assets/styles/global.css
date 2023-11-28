@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: 'vinque';
-    src: url('/assets/vinque-font.otf');
+    src: url(../vinque-font.otf);
 }
 
 @font-face {
     font-family: 'magic-school';
-    src: url('/assets/magic-school-one.ttf');
+    src: url(../magic-school-one.ttf);
 }
 
 :root{
